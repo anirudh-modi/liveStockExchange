@@ -1,6 +1,6 @@
 # liveStockExchange
 
-## Instalation
+## Installation
 To get the desired output follow the steps below : 
 
 * Download the repo
