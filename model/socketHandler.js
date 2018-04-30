@@ -16,7 +16,7 @@
     {
         var self = this;
 
-        self.socketHandler = io('https://52.87.164.228:8080/',{
+        self.socketHandler = io('http://52.87.164.228:3000/',{
           'reconnection':true
         });
 
