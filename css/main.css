@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'myCustom';
+  src: url('./DoHyeon-Regular.ttf'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+*
+{
+  margin:0px;
+  padding:0px;
+  font-family: 'myCustom', sans-serif;
+}
+
+.mainHeader
+{
+  height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #8269dc;
+    font-size: 19px;
+    color: #ffffff;
+    box-shadow: 0px 0px 7px 0px black;
+    z-index: 12;
+    position: relative;
+    width: 100%;
+}
+
+.noData
+{
+  position: absolute;
+top: 0;
+bottom: 0px;
+left: 0px;
+right: 0px;
+display: inline-block;
+width: 135px;
+height: 50px;
+margin: auto;
+/* background: red; */
+line-height: 50px;
+border: 2px dashed #8268dc;
+border-radius: 4px;
+background: #8268dc85;
+}
+
+.mainBodyContainer
+{
+  height: calc(100% - 50px);
+    background: #aecae62b;
+    position: relative;
+    width: 100%;
+}
+
+.stockListMainContainer
+{
+  width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.stockListContainer
+{
+  box-shadow: 0px 3px 8px 0px #0000003b;
+    margin: 10px auto;
+    width: 480px;
+    height: calc(100% - 25px);
+    text-align: center;
+    /* background: #00BCD4; */
+    overflow: scroll;
+    position: relative;
+    color: white;
+}
+.stockDetailHeader
+{
+  position: absolute;
+    background: #03A9F4;
+    box-shadow: 0px 3px 3px -2px #0000005e;
+  z-index: 12;
+}
+.stockListDetailContainer
+{
+  top: 55px;
+  position: absolute;
+  height: calc(100% - 55px);
+  overflow: scroll;
+
+}
+.stockHeaderDetailContainer
+{
+  font-size: 0;
+  margin-bottom:5px;
+}
+.stockHeaderElem
+{
+display: inline-block;
+height: 45px;
+line-height: 45px;
+width: 140px;
+text-align: center;
+font-size: 15px;
+background: #00000045;
+margin: 5px 5px;
+overflow: hidden;
+padding: 0px 5px;
+}
+
+.green
+{
+  /*background:#009688;*/
+  background: #8bc34ad9;
+}
+.red
+{
+  background:#ff0000bf;
+}

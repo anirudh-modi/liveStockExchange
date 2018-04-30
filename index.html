@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='css/main.css'>
+  </head>
+  <body>
+      <div id='mainContainer'>
+        <div class='mainHeader' id='mainHeader'>
+          Live Stock Rates
+        </div>
+        <div class='mainBodyContainer' id='mainBodyContainer'>
+        </div>
+      </div>
+  </body>
+  <script id='NotConnectedToServer' type='text/html'>
+    <div class='stockListMainContainer'>
+      <div class='stockListContainer'>
+        Not Connected
+      </div>
+    </div>
+  </script>
+
+  <script id='StockDataList' type='text/html'>
+    <div class='stockListMainContainer'>
+      <div data-bind='if:!stockList().length'>
+        <div class='stockListContainer'>
+          <span class='noData'>No data to show</span>
+        </div>
+      </div>
+      <div data-bind="if:stockList().length">
+        <div class='stockListContainer'>
+          <div class='stockHeaderDetailContainer stockDetailHeader'>
+            <span class='stockHeaderElem'>Name</span>
+            <span class='stockHeaderElem'>Price</span>
+            <span class='stockHeaderElem'>Last updated at</span>
+          </div>
+          <div data-bind='foreach:stockList' class='stockListDetailContainer'>
+            <div class='stockHeaderDetailContainer' data-bind='css:monitorPriceReponse'>
+              <span class='stockHeaderElem' data-bind="text:name"></span>
+              <span class='stockHeaderElem' data-bind="text:price"></span>
+              <span class='stockHeaderElem' data-bind="attr:{'ca':$data.lastUpdatedAt().getTime()},agoTimePattern:$data.sysTime"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script src="./model/utility.js"></script>
+  <script src="./lib/jquery.js"></script>
+  <script src="./lib/ko.js"></script>
+  <script src="./model/StockByNameCollection.js"></script>
+  <script src="./model/Stock.js"></script>
+  <script src="./lib/socket.io.js"></script>
+  <script src="./model/socketHandler.js"></script>
+  <script src="./viewModel/StockDataList_vm.js"></script>
+  <script src="./viewModel/LiveStock_vm.js"></script>
+</html>
